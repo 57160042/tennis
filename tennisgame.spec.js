@@ -1,37 +1,40 @@
 
 function Tennies(player){
 
-
       this.scoreA = 0;
       this.scoreB = 0;
+
+if(player === "start"){
+    return "( " + this.scoreA + " , " + this.scoreB + " )" + "--->" + PlayerGetScore( this.scoreA , this.scoreB);
+}
 
  if(player === 1){
       this.scoreA += 15;
 
-      return "( " + this.scoreA + " , " + this.scoreB + " )" + "--->" + Score( this.scoreA , this.scoreB);
+      return "( " + this.scoreA + " , " + this.scoreB + " )" + "--->" + PlayerGetScore( this.scoreA , this.scoreB);
 
   }
 
 
-  else if(player === 2){
+  if(player === 2){
 
       this.scoreB += 15;
 
-      return "( " + this.scoreA + " , " + this.scoreB + " )" + "--->" + Score( this.scoreA , this.scoreB);
+      return "( " + this.scoreA + " , " + this.scoreB + " )" + "--->" + PlayerGetScore( this.scoreA , this.scoreB);
   }
 }
 
-function Score( scoreA , scoreB ){
+function PlayerGetScore( playerA , playerB ){
 
-  if( scoreA === 0 && scoreB === 0){
+  if( playerA === 0 && playerB === 0){
      return " Love - Love ";
   }
 
-  if( scoreA === 0 && scoreB === 15){
+  if( playerA === 0 && playerB === 15){
      return " Love - Fifteen ";
   }
 
-  if( scoreA === 0 && scoreB === 30){
+  if( playerA === 0 && playerB === 30){
      return " Love - Forty ";
   }
 
