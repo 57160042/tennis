@@ -91,7 +91,7 @@ describe("Tennis game", function() {
   it('should be 0-0 "Love - Love" when starting the game', function() {
     var tennis = new Tennis();
     tennis.start();
-    expect(tennis.echo()).toEqual('Love - Love');
+    expect(tennis.echo()).toEqual(" Love - Love ");
   });
 
   it('should be 15-0 "Fifteen - Love" when starting the game', function() {
