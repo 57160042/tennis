@@ -1,5 +1,5 @@
 
-function Tennies(){
+function Tennis(){
 
   var ScoreA ;
   var ScoreB ;
