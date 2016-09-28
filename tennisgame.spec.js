@@ -99,5 +99,14 @@ describe("Tennis game", function() {
     expect(tennis.echo()).toEqual('Fifteen - Love');
   });
 
+  it('should be 30-0 "Thirty - Love" when starting the game', function() {
+    tennis.PlayerGetScoreA();
+    expect(tennis.echo()).toEqual('Thirty - Love');
+  });
+
+  it('should be 40-0 "Forty - Love" when starting the game', function() {
+    tennis.PlayerGetScoreA();
+    expect(tennis.echo()).toEqual('Forty - Love');
+  });
 
 });
