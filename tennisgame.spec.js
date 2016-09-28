@@ -107,6 +107,11 @@ describe("Tennis game", function() {
     expect(tennis.echo()).toEqual('Forty - Love');
   });
 
+  it('should be  "playerA Win" when playerA Win', function() {
+    tennis.PlayerGetScoreA();
+    expect(tennis.echo()).toEqual('playerA Win');
+  });
+
   it('should be 15-0 "Fifteen - Love" when starting the game', function() {
     tennis.start();
     tennis.PlayerGetScoreA();
@@ -121,6 +126,11 @@ describe("Tennis game", function() {
   it('should be 40-0 "Forty - Love" when starting the game', function() {
     tennis.PlayerGetScoreA();
     expect(tennis.echo()).toEqual('Forty - Love');
+  });
+
+  it('should be  "playerB Win" when playerB Win', function() {
+    tennis.PlayerGetScoreB();
+    expect(tennis.echo()).toEqual('playerB Win');
   });
 
 });
