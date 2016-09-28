@@ -23,15 +23,15 @@ function Tennies(player){
 
 function Score( scoreA , scoreB ){
 
-  if( scoreA === 0 &&scoreB === 0){
+  if( scoreA === 0 && scoreB === 0){
      return " Love - Love ";
   }
 
-  if( scoreA === 0 &&scoreB === 15){
+  if( scoreA === 0 && scoreB === 15){
      return " Love - Fifteen ";
   }
 
-  if( scoreA === 0 &&scoreB === 30){
+  if( scoreA === 0 && scoreB === 30){
      return " Love - Forty ";
   }
 
