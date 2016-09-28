@@ -1,20 +1,25 @@
 
 function Tennies(){
 
-  this.ScoreA = 0;
-  this.ScoreB = 0;
+  var ScoreA ;
+  var ScoreB ;
+
+  this.start = function(){
+    this.ScoreA = 0;
+    this.ScoreB = 0;
+  }
 
   this.PlayerGetScoreA = function(){
 
 
-      if(this.ScoreA === 30 ){
-               this.ScoreA+=10;
+      if(ScoreA === 30 ){
+               ScoreA+=10;
       }
-      if(this.ScoreA == 40 ){
-               this.ScoreA = 'win';
+      if(ScoreA == 40 ){
+               ScoreA = 'win';
       }
       else {
-                this.ScoreA+=15;
+                ScoreA+=15;
       }
 
    }
@@ -22,14 +27,14 @@ function Tennies(){
 
  this.PlayerGetScoreB = function(){
 
-     if(this.ScoreB === 30 ){
-               this.ScoreB+=10;
+     if(ScoreB === 30 ){
+               ScoreB+=10;
       }
-      if(this.ScoreB == 40 ){
-               this.ScoreB = 'win';
+      if(ScoreB == 40 ){
+               ScoreB = 'win';
       }
       else {
-                this.ScoreB+=15;
+                ScoreB+=15;
       }
 
   };
@@ -39,45 +44,53 @@ function Tennies(){
 
 this.echo = function(){
 
-       if( this.ScoreA === 0 && this.ScoreB === 0){
+       if( ScoreA === 0 && ScoreB === 0){
               return " Love - Love ";
         }
 
-        else if( this.ScoreA === 0 && this.ScoreB === 15){
+        else if( ScoreA === 0 && ScoreB === 15){
               return " Love - Fifteen ";
         }
 
-        else if( this.ScoreA === 0 && this.ScoreB === 30){
+        else if( ScoreA === 0 && ScoreB === 30){
               return " Love - Forty ";
         }
 
-        else if( this.ScoreA === 'win'){
+        else if( ScoreA === 'win'){
                return " PlayerB Win ";
         }
 
-       else if( this.ScoreA === 15 && this.ScoreB === 0){
+       else if( ScoreA === 15 && ScoreB === 0){
                return " Fifteen - Love ";
         }
 
-       else if( this.ScoreA === 30 && this.ScoreB === 0){
+       else if( ScoreA === 30 && ScoreB === 0){
                 return " Thirty - Love ";
         }
 
-       else if( this.ScoreA === 40 && this.ScoreB === 0){
+       else if( ScoreA === 40 && ScoreB === 0){
                 return " Forty - Love ";
         }
 
-        else if( this.ScoreA === 15 && this.ScoreB === 15){
+        else if( ScoreA === 15 && ScoreB === 15){
                 return " Fifteen - Fifteen ";
         }
 
-        else if( this.ScoreA === 30 && this.ScoreB === 30){
+        else if( ScoreA === 30 && ScoreB === 30){
                 return " Forty - Forty ";
         }
 
-        else if( this.ScoreA === 'win' ){
+        else if( ScoreA === 'win' ){
                 return " playerA Win ";
         }
 };
 
 }
+
+describe("Tennis game", function() {
+  it('should be "Love - Love" when starting the game', function() {
+    var tennis = new Tennis();
+    tennis.start();
+    expect(tennis.echo()).toEqual('Love - Love');
+  });
+});
