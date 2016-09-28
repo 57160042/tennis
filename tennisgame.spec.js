@@ -29,12 +29,12 @@ if(player === "start"){
   if(player === 2){
 
     if(this.scoreB === 30 ){
-      this.scoreA+=10;
+      this.scoreB+=10;
         return "( " + this.scoreA + " , " + this.scoreB + " )" + "--->" + PlayerGetScore( this.scoreA , this.scoreB);
     }
 
     if(this.scoreB >= 40 ){
-        this.scoreA+=15;
+        this.scoreB+=15;
         return PlayerGetScore( this.scoreA , this.scoreB);
     }
 
