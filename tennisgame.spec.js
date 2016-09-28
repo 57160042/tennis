@@ -1,16 +1,22 @@
+this.scoreA = 0;
+this.scoreB = 0;
 
 function Tennies(player){
-
-      this.scoreA = 0;
-      this.scoreB = 0;
 
 if(player === "start"){
     return "( " + this.scoreA + " , " + this.scoreB + " )" + "--->" + PlayerGetScore( this.scoreA , this.scoreB);
 }
 
  if(player === 1){
-      this.scoreA += 15;
+      if(this.scoreA === 30 && this.scoreA === 40){
+        this.scoreA+=10;
+          return "( " + this.scoreA + " , " + this.scoreB + " )" + "--->" + PlayerGetScore( this.scoreA , this.scoreB);
+      }
 
+      if(this.scoreA === 55){
+
+          return PlayerGetScore( this.scoreA , this.scoreB);
+      }
       return "( " + this.scoreA + " , " + this.scoreB + " )" + "--->" + PlayerGetScore( this.scoreA , this.scoreB);
 
   }
