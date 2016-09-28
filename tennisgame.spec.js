@@ -56,7 +56,7 @@ this.echo = function(){
               return 'Love - Forty';
         }
 
-        else if( ScoreA === 'win'){
+        else if( ScoreB === 'win'){
                return 'PlayerB Win';
         }
 
