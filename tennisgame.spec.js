@@ -63,6 +63,12 @@ function PlayerGetScore( playerA , playerB ){
     if( playerA === 15 && playerB === 0){
       return " Fifteen - Love ";
   }
+  if( playerA === 30 && playerB === 0){
+    return " thirty - Love ";
+  }
+  if( playerA === 40 && playerB === 0){
+    return " forty - Love ";
+  }
 
 
 }
