@@ -16,11 +16,21 @@ function Tennies(){
       else {
                 this.ScoreA+=15;
       }
-   };
+
+   }
 
 
  this.PlayerGetScoreB = fucntion(){
 
+     if(this.ScoreB === 30 ){
+               this.ScoreB+=10;
+      }
+      if(this.ScoreB == 40 ){
+               this.ScoreB = 'win';
+      }
+      else {
+                this.ScoreB+=15;
+      }
 
   };
 
@@ -29,43 +39,43 @@ function Tennies(){
 
 this.echo = function(){
 
-       if( playerA === 0 && playerB === 0){
+       if( this.ScoreA === 0 && this.ScoreB === 0){
               return " Love - Love ";
         }
 
-        else if( playerA === 0 && playerB === 15){
+        else if( this.ScoreA === 0 && this.ScoreB === 15){
               return " Love - Fifteen ";
         }
 
-        else if( playerA === 0 && playerB === 30){
+        else if( this.ScoreA === 0 && this.ScoreB === 30){
               return " Love - Forty ";
         }
 
-        else if( playerB === 'win'){
+        else if( this.ScoreA === 'win'){
                return " PlayerB Win ";
         }
 
-       else if( playerA === 15 && playerB === 0){
+       else if( this.ScoreA === 15 && this.ScoreB === 0){
                return " Fifteen - Love ";
         }
 
-       else if( playerA === 30 && playerB === 0){
+       else if( this.ScoreA === 30 && this.ScoreB === 0){
                 return " Thirty - Love ";
         }
 
-       else if( playerA === 40 && playerB === 0){
+       else if( this.ScoreA === 40 && this.ScoreB === 0){
                 return " Forty - Love ";
         }
 
-        else if( playerA === 15 && playerB === 15){
+        else if( this.ScoreA === 15 && this.ScoreB === 15){
                 return " Fifteen - Fifteen ";
         }
 
-        else if( playerA === 30 && playerB === 30){
+        else if( this.ScoreA === 30 && this.ScoreB === 30){
                 return " Forty - Forty ";
         }
 
-        else if( playerA === 'win' ){
+        else if( this.ScoreA === 'win' ){
                 return " playerA Win ";
         }
 };
