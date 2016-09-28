@@ -45,43 +45,43 @@ function Tennies(){
 this.echo = function(){
 
        if( ScoreA === 0 && ScoreB === 0){
-              return " Love - Love ";
+              return 'Love - Love';
         }
 
         else if( ScoreA === 0 && ScoreB === 15){
-              return " Love - Fifteen ";
+              return 'Love - Fifteen';
         }
 
         else if( ScoreA === 0 && ScoreB === 30){
-              return " Love - Forty ";
+              return 'Love - Forty';
         }
 
         else if( ScoreA === 'win'){
-               return " PlayerB Win ";
+               return 'PlayerB Win';
         }
 
        else if( ScoreA === 15 && ScoreB === 0){
-               return " Fifteen - Love ";
+               return 'Fifteen - Love';
         }
 
        else if( ScoreA === 30 && ScoreB === 0){
-                return " Thirty - Love ";
+                return 'Thirty - Love';
         }
 
        else if( ScoreA === 40 && ScoreB === 0){
-                return " Forty - Love ";
+                return 'Forty - Love';
         }
 
         else if( ScoreA === 15 && ScoreB === 15){
-                return " Fifteen - Fifteen ";
+                return 'Fifteen - Fifteen';
         }
 
         else if( ScoreA === 30 && ScoreB === 30){
-                return " Forty - Forty ";
+                return 'Forty - Forty';
         }
 
         else if( ScoreA === 'win' ){
-                return " playerA Win ";
+                return 'playerA Win';
         }
 };
 
@@ -91,7 +91,7 @@ describe("Tennis game", function() {
   it('should be 0-0 "Love - Love" when starting the game', function() {
     var tennis = new Tennis();
     tennis.start();
-    expect(tennis.echo()).toEqual(" Love - Love ");
+    expect(tennis.echo()).toEqual('Love - Love');
   });
 
   it('should be 15-0 "Fifteen - Love" when starting the game', function() {
