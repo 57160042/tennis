@@ -1,88 +1,73 @@
-this.scoreA = 0;
-this.scoreB = 0;
 
-function Tennies(player){
+function Tennies(){
 
-if(player === "start"){
-    return "( " + this.scoreA + " , " + this.scoreB + " )" + "--->" + PlayerGetScore( this.scoreA , this.scoreB);
-}
+  this.ScoreA = 0;
+  this.ScoreB = 0;
 
- if(player === 1){
-      if(this.scoreA === 30 ){
-        this.scoreA+=10;
-          return "( " + this.scoreA + " , " + this.scoreB + " )" + "--->" + PlayerGetScore( this.scoreA , this.scoreB);
+  this.PlayerGetScoreA = fucntion(){
+
+
+      if(this.ScoreA === 30 ){
+               this.ScoreA+=10;
       }
-
-      if(this.scoreA >= 40 ){
-          this.scoreA+=15;
-          return PlayerGetScore( this.scoreA , this.scoreB);
+      if(this.ScoreA == 40 ){
+               this.ScoreA = 'win';
       }
-
       else {
-            this.scoreA+=15;
-            return "( " + this.scoreA + " , " + this.scoreB + " )" + "--->" + PlayerGetScore( this.scoreA , this.scoreB);
+                this.ScoreA+=15;
       }
+   };
 
-  }
+
+ this.PlayerGetScoreB = fucntion(){
 
 
-  if(player === 2){
+  };
 
-    if(this.scoreB === 30 ){
-      this.scoreB+=10;
-        return "( " + this.scoreA + " , " + this.scoreB + " )" + "--->" + PlayerGetScore( this.scoreA , this.scoreB);
-    }
 
-    if(this.scoreB >= 40 ){
-        this.scoreB+=15;
-        return PlayerGetScore( this.scoreA , this.scoreB);
-    }
 
-    else {
-          this.scoreB+=15;
-          return "( " + this.scoreA + " , " + this.scoreB + " )" + "--->" + PlayerGetScore( this.scoreA , this.scoreB);
-    }
-  }
-}
 
-function PlayerGetScore( playerA , playerB ){
+this.echo = function(){
 
-    if( playerA === 0 && playerB === 0){
-      return " Love - Love ";
-  }
-    else if( playerA === 0 && playerB === 15){
-      return " Love - Fifteen ";
-  }
-    else if( playerA === 0 && playerB === 30){
-      return " Love - Forty ";
-  }
-    else if( playerB > 40){
-       return " PlayerB Win ";
-    }
+       if( playerA === 0 && playerB === 0){
+              return " Love - Love ";
+        }
 
-    else if( playerA === 15 && playerB === 0){
-      return " Fifteen - Love ";
-  }
-  else if( playerA === 30 && playerB === 0){
-    return " Thirty - Love ";
-  }
-  else if( playerA === 40 && playerB === 0){
-    return " Forty - Love ";
-  }
-  else if( playerA === 15 && playerB === 15){
-    return " Fifteen - Fifteen ";
-  }
-  else if( playerA === 30 && playerB === 30){
-    return " Thirty - Thirty ";
-  }
-  else if( playerA === 30 && playerB === 15){
-    return " Thirty - Fifteen ";
-  }
-  else if( playerA === 15 && playerB === 30){
-    return " Fifteen - Thirty ";
-  }
-  else if( playerA > 40 ){
-    return " playerA Win ";
-  }
+        else if( playerA === 0 && playerB === 15){
+              return " Love - Fifteen ";
+        }
+
+        else if( playerA === 0 && playerB === 30){
+              return " Love - Forty ";
+        }
+
+        else if( playerB === 'win'){
+               return " PlayerB Win ";
+        }
+
+       else if( playerA === 15 && playerB === 0){
+               return " Fifteen - Love ";
+        }
+
+       else if( playerA === 30 && playerB === 0){
+                return " Thirty - Love ";
+        }
+
+       else if( playerA === 40 && playerB === 0){
+                return " Forty - Love ";
+        }
+
+        else if( playerA === 15 && playerB === 15){
+                return " Fifteen - Fifteen ";
+        }
+
+        else if( playerA === 30 && playerB === 30){
+                return " Forty - Forty ";
+        }
+
+        else if( playerA === 'win' ){
+                return " playerA Win ";
+        }
+};
 
 }
