@@ -5,8 +5,8 @@ function Tennis(){
   var ScoreB ;
 
   this.start = function(){
-    this.ScoreA = 0;
-    this.ScoreB = 0;
+    ScoreA = 0;
+    ScoreB = 0;
   }
 
   this.PlayerGetScoreA = function(){
@@ -88,15 +88,16 @@ this.echo = function(){
 }
 
 describe("Tennis game", function() {
+  var tennis = new Tennies();
   it('should be 0-0 "Love - Love" when starting the game', function() {
-    var tennis = new Tennis();
     tennis.start();
     expect(tennis.echo()).toEqual('Love - Love');
   });
 
   it('should be 15-0 "Fifteen - Love" when starting the game', function() {
-    var tennis = new Tennis();
-
+    tennis.PlayerGetScoreA();
     expect(tennis.echo()).toEqual('Fifteen - Love');
   });
+
+
 });
