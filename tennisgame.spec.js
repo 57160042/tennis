@@ -15,7 +15,7 @@ function Tennis(){
       if(ScoreA === 30 ){
                ScoreA+=10;
       }
-      if(ScoreA == 40 ){
+      if(ScoreA === 40 ){
                ScoreA = 'win';
       }
       else {
@@ -88,7 +88,7 @@ this.echo = function(){
 }
 
 describe("Tennis game", function() {
-  var tennis = new Tennies();
+  var tennis = new Tennis();
   it('should be 0-0 "Love - Love" when starting the game', function() {
     tennis.start();
     expect(tennis.echo()).toEqual('Love - Love');
