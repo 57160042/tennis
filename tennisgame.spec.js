@@ -4,7 +4,7 @@ function Tennies(){
   this.ScoreA = 0;
   this.ScoreB = 0;
 
-  this.PlayerGetScoreA = fucntion(){
+  this.PlayerGetScoreA = function(){
 
 
       if(this.ScoreA === 30 ){
@@ -20,7 +20,7 @@ function Tennies(){
    }
 
 
- this.PlayerGetScoreB = fucntion(){
+ this.PlayerGetScoreB = function(){
 
      if(this.ScoreB === 30 ){
                this.ScoreB+=10;
