@@ -47,19 +47,21 @@ if(player === "start"){
 
 function PlayerGetScore( playerA , playerB ){
 
-  if( playerA === 0 && playerB === 0){
-     return " Love - Love ";
+    if( playerA === 0 && playerB === 0){
+      return " Love - Love ";
   }
+    if( playerA === 0 && playerB === 15){
+      return " Love - Fifteen ";
+  }
+    if( playerA === 0 && playerB === 30){
+      return " Love - Forty ";
+  }
+    if( playerB > 40){
+       return " PlayerB Win ";
+    }
 
-  if( playerA === 0 && playerB === 15){
-     return " Love - Fifteen ";
-  }
-
-  if( playerA === 0 && playerB === 30){
-     return " Love - Forty ";
-  }
-  else {
-    return "Win";
+    if( playerA === 15 && playerB === 0){
+      return " Fifteen - Love ";
   }
 
 
