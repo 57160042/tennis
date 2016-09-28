@@ -78,10 +78,5 @@ function PlayerGetScore( playerA , playerB ){
   else if( playerA > 40 ){
     return " playerA Win ";
   }
-  else if( playerB > 40 ){
-    return " playerB Win ";
-  }
-
-
 
 }
