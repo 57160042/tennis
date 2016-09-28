@@ -13,8 +13,8 @@ if(player === "start"){
           return "( " + this.scoreA + " , " + this.scoreB + " )" + "--->" + PlayerGetScore( this.scoreA , this.scoreB);
       }
 
-      if(this.scoreA > 40 ){
-
+      if(this.scoreA >= 40 ){
+          this.scoreA+=15;
           return PlayerGetScore( this.scoreA , this.scoreB);
       }
 
