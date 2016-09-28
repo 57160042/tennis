@@ -73,7 +73,7 @@ function PlayerGetScore( playerA , playerB ){
     return " Fifteen - Fifteen ";
   }
   else if( playerA === 30 && playerB === 30){
-    return " Forty - Forty ";
+    return " Thirty - Thirty ";
   }
   else if( playerA > 40 ){
     return " playerA Win ";
